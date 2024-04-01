@@ -24,3 +24,26 @@ public:
         
     }
 };
+
+
+#include<bits/stdc++.h>
+using namespace std;
+void display(string arr[],int n){
+	if(n==0) return;
+	while(n!=0){
+		int a=n%10;
+		cout<<arr[a]<<" ";
+		n=n/10;
+	}
+
+     int a=n%10;
+     
+     display(arr,n/10);
+     cout<<arr[a]<<" ";
+}
+int main(){
+	int n;
+	cin>>n;
+	string arr[10]={"Zero","one","Two","Three","Four","Five","Six","Seven","Eight","Nine"};
+	display(arr,n);
+}
